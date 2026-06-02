@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-grisclaro: #e6eff6;
+    --background-blanco: #ffffff;
+    --background-turquesaClaro: #4abebd;
+    --background-turquesaOscuro: #2bb3b1;
+    --background-verdeBrillante: #bfdf32;
+    --color-verdeBrillante: #bfdf32;
+    --color-gris: #a9b0b9;
+    --color-turquesa: #49adab;
+    --color-transparente: #6cd8db;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', serif;
+}
+body{
+    background-color: var(--background-grisclaro);
+}
+.box-components{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-components .price-component{
+    width: 90%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.price-component .about{
+    background-color: var(--background-blanco);
+    padding: 3rem;
+    font-size: 1.5rem;
+}
+.about .title{
+    color: var(--color-turquesa);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+.about .subtitle{
+    color: var(--color-verdeBrillante);
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+.about .about-community{
+    color: var(--color-gris);
+    font-size: 1.7rem;
+}
+
+.price-component .suscription{
+    background-color: var(--background-turquesaOscuro);
+    padding: 3rem;
+    font-size: 1.5rem;
+    color: var(--background-blanco);
+}
+.suscription .title-suscription{
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.suscription .plan_month{
+    color: var(--color-transparente);
+}
+.suscription .plan_month .price{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--background-blanco);
+}
+.suscription p{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+.suscription .btn-signUp{
+    text-decoration: none;
+    color: var(--background-blanco);
+    background-color: var(--background-verdeBrillante);
+    padding: 1rem;
+    display: inline-block;
+    width: 100%;
+    border-radius: .5rem;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 1rem 2rem 0.6px rgba(0, 0, 0, .2);
+}
+
+
+.price-component .why-us{
+    padding: 3rem;
+    background-color: var(--background-turquesaClaro);
+    color: var(--background-blanco);
+    
+}
+.why-us .title-whyUs{
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+}
+.why-us .caracteristics{
+    list-style: none;
+    color: var(--background-grisclaro);
+    font-size: 1.5rem;
+}
+
+@media (min-width: 75rem){
+    .price-component{
+        max-width: 60rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "about about"
+            "suscription why-us"
+        ;
+    }
+    .about{
+        grid-area: about;
+    }
+     .about .title{
+        font-size: 2rem;
+     }
+    .about .subtitle{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .about .about-community{
+        font-size: 1.3rem;
+    }
+    .suscription{
+        grid-area: suscription;
+    }
+    .plan_month{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: 1.2rem;
+    }
+    .suscription p{
+        font-size: 1.2rem;
+    }
+    .why-us{
+        grid-area: why-us;
+    }
+    .why-us .caracteristics{
+        font-size: 1.2rem;
+    }
+    
+}
+@media (width >= 40rem) and (width <= 75rem ){
+    .suscription{
+        text-align: center;
+    }
+    .why-us{
+        text-align: center;
+    }
+}
